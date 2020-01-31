@@ -1,0 +1,21 @@
+<h2 class="text-center p-5">List tipos</h2>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of tipos">
+      <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td><a routerLink="/home">Editar</a></td>
+        <td> <button (click)="delete(item.id)" class="btn btn-primary">eliminar</button>
+         </td>
+      </tr>
+
+    </tbody>
+  </table>
